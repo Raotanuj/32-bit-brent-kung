@@ -1,0 +1,25 @@
+module Dutwrapper (clk,A1,B1,Cin1,Sum1);
+
+parameter N = 32;
+
+input [N-1:0] A, B;
+input Cin;
+
+output [N:0] Sum;
+
+Brent B1(A2,B2,Cin2,Sum2);
+
+always @(clk)
+begin
+A2<=A1;
+B2<=B1;
+end
+
+always @(clk)
+begin
+Cin1<=Cin2;
+Sum1<=Sum2;
+end
+
+
+endmodule
